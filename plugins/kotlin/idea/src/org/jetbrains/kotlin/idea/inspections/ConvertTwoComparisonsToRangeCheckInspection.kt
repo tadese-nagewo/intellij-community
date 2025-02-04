@@ -11,6 +11,7 @@ import org.jetbrains.kotlin.idea.caches.resolve.analyze
 import org.jetbrains.kotlin.idea.caches.resolve.analyzeAsReplacement
 import org.jetbrains.kotlin.idea.codeinsight.api.classic.inspections.AbstractApplicabilityBasedInspection
 import org.jetbrains.kotlin.idea.codeinsights.impl.base.isSimplifiableTo
+import org.jetbrains.kotlin.idea.codeinsights.impl.base.renderAsEscapeSequence
 import org.jetbrains.kotlin.lexer.KtTokens
 import org.jetbrains.kotlin.psi.*
 import org.jetbrains.kotlin.psi.psiUtil.getStrictParentOfType
@@ -143,7 +144,10 @@ class ConvertTwoComparisonsToRangeCheckInspection :
                                 else -> it.toString()
                             }
                         }
-                        KotlinBuiltIns.isChar(type) -> "'${constantValue as Char + number}'"
+                        KotlinBuiltIns.isChar(type) -> {
+                            val value: Char = (constantValue as Char) + number
+                            "'${value.renderAsEscapeSequence()}'"
+                        }
                         else -> null
                     }
                 }

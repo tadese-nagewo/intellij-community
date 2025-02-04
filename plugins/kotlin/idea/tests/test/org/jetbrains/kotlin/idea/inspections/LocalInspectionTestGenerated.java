@@ -4138,6 +4138,11 @@ public abstract class LocalInspectionTestGenerated extends AbstractLocalInspecti
             runTest("testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/charInt.kt");
         }
 
+        @TestMetadata("charNonPrintable.kt")
+        public void testCharNonPrintable() throws Exception {
+            runTest("testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/charNonPrintable.kt");
+        }
+
         @TestMetadata("compareToComparableSameType.kt")
         public void testCompareToComparableSameType() throws Exception {
             runTest("testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/compareToComparableSameType.kt");
@@ -4278,9 +4283,24 @@ public abstract class LocalInspectionTestGenerated extends AbstractLocalInspecti
             runTest("testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/nonConstants.kt");
         }
 
+        @TestMetadata("notInRange.kt")
+        public void testNotInRange() throws Exception {
+            runTest("testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/notInRange.kt");
+        }
+
+        @TestMetadata("notInRangeInclusive.kt")
+        public void testNotInRangeInclusive() throws Exception {
+            runTest("testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/notInRangeInclusive.kt");
+        }
+
         @TestMetadata("platformType.kt")
         public void testPlatformType() throws Exception {
             runTest("testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/platformType.kt");
+        }
+
+        @TestMetadata("rangeUntilDouble.kt")
+        public void testRangeUntilDouble() throws Exception {
+            runTest("testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/rangeUntilDouble.kt");
         }
 
         @TestMetadata("recursiveCall.kt")

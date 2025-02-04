@@ -12801,4 +12801,213 @@ public abstract class K2LocalInspectionTestGenerated extends AbstractK2LocalInsp
             runTest("../../../idea/tests/testData/intentions/removeExplicitTypeArguments/variablesAndLiterals.kt");
         }
     }
+
+    @RunWith(JUnit3RunnerWithInners.class)
+    @TestMetadata("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck")
+    public static class ConvertTwoComparisonsToRangeCheck extends AbstractK2LocalInspectionTest {
+        @java.lang.Override
+        @org.jetbrains.annotations.NotNull
+        public final KotlinPluginMode getPluginMode() {
+            return KotlinPluginMode.K2;
+        }
+
+        private void runTest(String testDataFilePath) throws Exception {
+            KotlinTestUtils.runTest(this::doTest, this, testDataFilePath);
+        }
+
+        @TestMetadata("binary.kt")
+        public void testBinary() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/binary.kt");
+        }
+
+        @TestMetadata("char.kt")
+        public void testChar() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/char.kt");
+        }
+
+        @TestMetadata("charInclusive.kt")
+        public void testCharInclusive() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/charInclusive.kt");
+        }
+
+        @TestMetadata("charInt.kt")
+        public void testCharInt() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/charInt.kt");
+        }
+
+        @TestMetadata("charNonPrintable.kt")
+        public void testCharNonPrintable() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/charNonPrintable.kt");
+        }
+
+        @TestMetadata("compareToComparableSameType.kt")
+        public void testCompareToComparableSameType() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/compareToComparableSameType.kt");
+        }
+
+        @TestMetadata("compareToDifferentTypes.kt")
+        public void testCompareToDifferentTypes() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/compareToDifferentTypes.kt");
+        }
+
+        @TestMetadata("compareToSameType.kt")
+        public void testCompareToSameType() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/compareToSameType.kt");
+        }
+
+        @TestMetadata("double.kt")
+        public void testDouble() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/double.kt");
+        }
+
+        @TestMetadata("doubleToInt1.kt")
+        public void testDoubleToInt1() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/doubleToInt1.kt");
+        }
+
+        @TestMetadata("doubleToInt2.kt")
+        public void testDoubleToInt2() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/doubleToInt2.kt");
+        }
+
+        @TestMetadata("flipped.kt")
+        public void testFlipped() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/flipped.kt");
+        }
+
+        @TestMetadata("flippedSideEffect.kt")
+        public void testFlippedSideEffect() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/flippedSideEffect.kt");
+        }
+
+        @TestMetadata("gtDouble.kt")
+        public void testGtDouble() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/gtDouble.kt");
+        }
+
+        @TestMetadata("gtDouble2.kt")
+        public void testGtDouble2() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/gtDouble2.kt");
+        }
+
+        @TestMetadata("gteqgt.kt")
+        public void testGteqgt() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/gteqgt.kt");
+        }
+
+        @TestMetadata("gteqgteq.kt")
+        public void testGteqgteq() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/gteqgteq.kt");
+        }
+
+        @TestMetadata("gteqlt.kt")
+        public void testGteqlt() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/gteqlt.kt");
+        }
+
+        @TestMetadata("gteqlteq.kt")
+        public void testGteqlteq() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/gteqlteq.kt");
+        }
+
+        @TestMetadata("gtgt.kt")
+        public void testGtgt() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/gtgt.kt");
+        }
+
+        @TestMetadata("gtgteq.kt")
+        public void testGtgteq() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/gtgteq.kt");
+        }
+
+        @TestMetadata("gtlt.kt")
+        public void testGtlt() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/gtlt.kt");
+        }
+
+        @TestMetadata("gtlteq.kt")
+        public void testGtlteq() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/gtlteq.kt");
+        }
+
+        @TestMetadata("hexadecimal.kt")
+        public void testHexadecimal() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/hexadecimal.kt");
+        }
+
+        @TestMetadata("lteqgt.kt")
+        public void testLteqgt() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/lteqgt.kt");
+        }
+
+        @TestMetadata("lteqgteq.kt")
+        public void testLteqgteq() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/lteqgteq.kt");
+        }
+
+        @TestMetadata("lteqlt.kt")
+        public void testLteqlt() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/lteqlt.kt");
+        }
+
+        @TestMetadata("lteqlteq.kt")
+        public void testLteqlteq() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/lteqlteq.kt");
+        }
+
+        @TestMetadata("ltgt.kt")
+        public void testLtgt() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/ltgt.kt");
+        }
+
+        @TestMetadata("ltgteq.kt")
+        public void testLtgteq() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/ltgteq.kt");
+        }
+
+        @TestMetadata("ltlt.kt")
+        public void testLtlt() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/ltlt.kt");
+        }
+
+        @TestMetadata("ltlteq.kt")
+        public void testLtlteq() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/ltlteq.kt");
+        }
+
+        @TestMetadata("nonConstants.kt")
+        public void testNonConstants() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/nonConstants.kt");
+        }
+
+        @TestMetadata("notInRange.kt")
+        public void testNotInRange() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/notInRange.kt");
+        }
+
+        @TestMetadata("notInRangeInclusive.kt")
+        public void testNotInRangeInclusive() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/notInRangeInclusive.kt");
+        }
+
+        @TestMetadata("platformType.kt")
+        public void testPlatformType() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/platformType.kt");
+        }
+
+        @TestMetadata("rangeUntilDouble.kt")
+        public void testRangeUntilDouble() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/rangeUntilDouble.kt");
+        }
+
+        @TestMetadata("recursiveCall.kt")
+        public void testRecursiveCall() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/recursiveCall.kt");
+        }
+
+        @TestMetadata("until.kt")
+        public void testUntil() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/convertTwoComparisonsToRangeCheck/until.kt");
+        }
+    }
 }
