@@ -60,17 +60,35 @@ object CallableReturnTypeUpdaterUtils {
         updater = updater,
     )
 
+    fun updateTypeForDeclarationInDummyFile(
+        declaration: KtCallableDeclaration,
+        typeInfo: TypeInfo,
+        project: Project,
+    ) = updateType(
+        declaration,
+        typeInfo,
+        project,
+        editor = null,
+        updater = null,
+        declarationInDummyFile = true,
+    )
+
     private fun updateType(
         declaration: KtCallableDeclaration,
         typeInfo: TypeInfo,
         project: Project,
         editor: Editor? = null,
-        updater: ModPsiUpdater? = null
+        updater: ModPsiUpdater? = null,
+        declarationInDummyFile: Boolean = false,
     ) {
         if (updater != null && typeInfo.useTemplate) {
             setTypeWithTemplate(listOf(declaration to typeInfo).iterator(), project, updater)
         } else if (editor == null || !typeInfo.useTemplate || !ApplicationManager.getApplication().isWriteAccessAllowed) {
-            declaration.setAndShortenTypeReference(typeInfo.defaultType, project, updater)
+            if (declarationInDummyFile) {
+                declaration.setTypeReference(typeInfo.defaultType, project)
+            } else {
+                declaration.setAndShortenTypeReference(typeInfo.defaultType, project, updater)
+            }
         } else {
             setTypeWithTemplate(listOf(declaration to typeInfo).iterator(), project, editor)
         }
